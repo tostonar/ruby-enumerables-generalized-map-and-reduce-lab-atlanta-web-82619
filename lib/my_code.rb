@@ -9,10 +9,9 @@ def map(source_array)
   return new
 end
 
-def reduce(source_array, starting_point = 0)
-sum = starting_point
+def reduce(source_array, accumulator = 0)
   source_array.each do |n|
-    sum += yield(n)
+    accumulator = yield(accumulator, n)
   end
-  return sum
+  return accumulator
 end
