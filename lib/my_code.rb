@@ -8,3 +8,7 @@ def map(source_array, block)
   end
   return new
 end
+
+def reduce
+  
+end
