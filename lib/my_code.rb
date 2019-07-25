@@ -11,6 +11,6 @@ end
 
 def reduce(source_array)
   source_array.each do |memo, element|
-    yield(element)
+    yield(memo, element)
   end
 end
