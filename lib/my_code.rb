@@ -11,8 +11,9 @@ end
 
 def reduce(source_array, starting_point = 0)
 
-  source_array.each do |memo, element|
-    starting_point = memo
-    yield(memo, element)
+  source_array.each do |sum, n|
+    sum = starting_point
+    yield(sum, n)
   end
+  return sum
 end
