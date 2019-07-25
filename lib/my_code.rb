@@ -13,5 +13,9 @@ def reduce(source_array, accumulator = 0)
   source_array.each do |n|
     accumulator = yield(accumulator, n)
   end
-  return accumulator || accumulator.true? 
+  if accumulator == 0
+    return true
+  else
+    return accumulator
+  end
 end
