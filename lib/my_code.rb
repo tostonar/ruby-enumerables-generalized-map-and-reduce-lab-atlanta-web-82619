@@ -3,8 +3,8 @@ def map(source_array)
   new = []
   i = 0
   while i < source_array.length do
-      source_array[i]
-      yield
+      new << yield(source_array[i])
+
     i += 1
   end
   return new
