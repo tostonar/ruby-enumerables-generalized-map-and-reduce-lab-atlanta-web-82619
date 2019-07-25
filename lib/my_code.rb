@@ -13,7 +13,7 @@ def reduce(source_array, starting_point = 0)
   new = starting_point
   i = 0
   while i < source_array.length do
-     return yield(source_array[i])
+    yield(source_array[i])
     i += 1
   end
 
