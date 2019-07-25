@@ -10,12 +10,13 @@ def map(source_array)
 end
 
 def reduce(source_array, starting_point = 0)
-  new = starting_point
-  i = 0
-  while i < source_array.length do
-    new = yield(new, source_array[i])
-    i += 1
-  end
-  return new
+  # new = starting_point
+  # i = 0
+  # while i < source_array.length do
+  #   new = yield(new, source_array[i])
+  #   i += 1
+  # end
+  # return new
+  source_array.reduce(starting_point, :yield)
 
 end
