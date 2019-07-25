@@ -10,7 +10,7 @@ def map(source_array)
 end
 
 def reduce(source_array)
-  source_array.each do |memo, element|
+  source_array.each do |memo = 0, element|
     yield(memo, element)
   end
 end
